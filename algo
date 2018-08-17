@@ -1,0 +1,21 @@
+I Calculer toutes les positions possible au sein d'un cube
+    - la position initial de la piece est calculer en fonction de sa taille depuis l'origine (0,0,0), coin du cube
+    - la piece subit une translation d'une unité sur Z, puis X, puis Y, tant qu'on peut translater sur Y on translate.
+    - une fois atteint une parois du cube on reset le compteur sur l'axe et on destack
+    - enregistrer toutes les positions valides (à l'interieur du cube) 
+
+II Calculer toutes combinaison de positions valide
+Une fois qu'on a toutes les positions possible pour chaque pièce on test toute combinaison possible
+    - pièce 1 en position 1 est selectionné
+    - pièce 2 en position 1 est selectionné
+    - si des cases se chevauche pièce 2 passe en position 2
+    - si c'est bon on passe à pièce 3 etc..
+    - lorsque toute les positions d'une pièce on était test et ne marche pas, on destack (on incremente la position de la pièce précedente)
+    - lorque la dernière pièce a trouver une place valide, enregister la position de toute les pièces
+
+III afficher le tableau de combinaison possible
+
+IV visualiseur (optionnel)
+Faire un visualiseur 3d. Afficher une grille 3d representant le cube à remplir
+Afficher chaque pièce dans une couleur différente à chaque essai.
+
